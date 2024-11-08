@@ -189,16 +189,16 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     nom_fichier = os.path.join(script_dir, '2024-09-18_17-59-47.txt') #--- Modifier le nom du fichier selon le fichier qui contient vos données
-    html_file_path = os.path.join(script_dir, "gps_map.html") #--- Ajout du fichier.html qui affiche la carte et les points dans le repertoire du script
+    html_file_path = os.path.join(script_dir, "gps_map.html") #--- Ajout du fichier.html qui affiche la carte et les points dans le repertoire du script si il n'existe pas
 
     contenu = lire_et_afficher_fichier(nom_fichier)
     
     if contenu:
-        creer_graphique_vitesse(contenu)
+        creer_graphique_vitesse(contenu) #--- Creer le graphique de la vitesse
         
-        gps_data = process_gps_data(nom_fichier)
+        gps_data = process_gps_data(nom_fichier) 
         
-        create_map(gps_data, html_file_path)
+        create_map(gps_data, html_file_path) 
 
 if __name__ == "__main__":
     main()
