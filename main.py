@@ -188,8 +188,8 @@ def process_gps_data(filename):
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    nom_fichier = os.path.join(script_dir, '2024-09-18_17-59-47.txt') #--- Chemin du fichier texte d'entrée et du fichier HTML de sortie
-    html_file_path = os.path.join(script_dir, "gps_map.html")
+    nom_fichier = os.path.join(script_dir, '2024-09-18_17-59-47.txt') #--- Modifier le nom du fichier selon le fichier qui contient vos données
+    html_file_path = os.path.join(script_dir, "gps_map.html") #--- Ajout du fichier.html qui affiche la carte et les points dans le repertoire du script
 
     contenu = lire_et_afficher_fichier(nom_fichier)
     
